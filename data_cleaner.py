@@ -3,9 +3,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import re
-import keras.preprocessing
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
-from keras.preprocessing.text import Tokenizer
 from numpy import array
 from numpy import argmax
 from sklearn.preprocessing import LabelEncoder
@@ -18,9 +16,11 @@ import re
 import string
 import os
 import tensorflow as tf
+#import keras.preprocessing
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Embedding, Flatten
+from tensorflow.keras.preprocessing.text import Tokenizer
 
 
 
@@ -342,7 +342,7 @@ model.summary()
 history=model.fit(X_ntrain, y_ntrain, batch_size=32, epochs=50, validation_data=(X_val1,y_val1))
 
 #df.head(5)
-
+"""
 def plot_hist(history):
   import pandas as pd
   import plotly.graph_objects as go
@@ -363,4 +363,4 @@ def plot_hist(history):
 
   return
 
-plot_hist(history)
+plot_hist(history)"""
