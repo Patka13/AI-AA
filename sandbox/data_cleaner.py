@@ -360,7 +360,5 @@ def plot_hist(history):
   fig.add_trace(go.Scatter(x=hist['epoch'], y=hist['val_loss'], name='val_loss', mode='markers+lines'))
   fig.update_layout(width=1000, height=500, title='loss vs val accuracy', xaxis_title='epoki', yaxis_title='loss')
   fig.show()
-
-
   return
 plot_hist(history)
