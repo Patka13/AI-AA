@@ -364,4 +364,3 @@ def plot_hist(history):
 
   return
 plot_hist(history)
-df.head(29)
