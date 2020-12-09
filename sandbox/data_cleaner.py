@@ -26,7 +26,8 @@ from tensorflow.keras.preprocessing.text import Tokenizer
 
 #Data Gathering and variables declaration
 #data import and variables declaration
-data = pd.read_csv('PPTD.csv', encoding= 'unicode_escape', sep=';')
+#data = pd.read_csv('PPTD.csv', encoding= 'unicode_escape', sep=';')
+data = pd.read_csv('sandbox\PPTD.csv', encoding= 'unicode_escape', sep=';')
 df=pd.DataFrame(data)
 desc1=Series.tolist(df.iloc[:,0])
 loc=Series.tolist(df.iloc[:,1])
@@ -339,10 +340,10 @@ model.compile(optimizer='rmsprop',
               metrics='accuracy')
 model.summary()
 
-history=model.fit(X_ntrain, y_ntrain, batch_size=32, epochs=50, validation_data=(X_val1,y_val1))
+history=model.fit(X_ntrain, y_ntrain, batch_size=32, epochs=25, validation_data=(X_val1,y_val1))
 
 #df.head(5)
-"""
+
 def plot_hist(history):
   import pandas as pd
   import plotly.graph_objects as go
@@ -362,5 +363,4 @@ def plot_hist(history):
 
 
   return
-
-plot_hist(history)"""
+plot_hist(history)
