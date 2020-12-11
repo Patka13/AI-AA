@@ -334,13 +334,13 @@ model.add(Flatten())
 model.add(Dense(16, activation='relu'))
 model.add(Dense(100, activation='sigmoid'))
 
-
+'''
 model.compile(optimizer='rmsprop',
               loss='categorical_crossentropy',
               metrics='accuracy')
 model.summary()
-
-history=model.fit(X_ntrain, y_ntrain, batch_size=32, epochs=25, validation_data=(X_val1,y_val1))
+'''
+'''history=model.fit(X_ntrain, y_ntrain, batch_size=32, epochs=50, validation_data=(X_val1,y_val1))
 
 
 
@@ -363,4 +363,5 @@ def plot_hist(history):
 
 
   return
-plot_hist(history)
+plot_hist(history)'''
+df.head(10)
